@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --baseblue: #088178;
+    --border: #cce7d0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    font-weight: 700;
+}
+
+
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+/* 1:08:39 📄普通にbuttonだけじゃない */
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .2s;
+}
+
+
+body {
+    width: 100%;
+}
+
+
+/* ⭐header start */
+#header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    /* #navbar li a は同じとこ指示してるから意味ない */
+    /* 26:45 */
+    position: relative;
+
+}
+
+#navbar a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: all 300ms ease;
+}
+
+
+
+#navbar a:hover,
+/* aのあとスペース❌ */
+#navbar li a.active {
+    color: var(--baseblue);
+}
+
+#navbar li a.active::after,
+/* activeうつのめんどいから省略してるのかね */
+#navbar li a:hover::after {
+    content: "";
+    width: 50%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: var(--baseblue);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#navbar li a.contact::after {
+    width: 60%;
+}
+
+#navbar li a.cart::after {
+    width: 28%;
+}
+
+
+#mobile {
+    display: none;
+}
+
+#close {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* ⭐hero 29:00 */
+
+#hero {
+    background-image: url(./img/hero4.png);
+    width: 100%;
+    height: 90vh;
+    background-position: right 0% top 25%;
+    background-size: cover;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4 {
+    padding-bottom: 15px;
+}
+
+#hero h1 {
+    color: var(--baseblue);
+}
+
+#hero button {
+    background-image: url(./img/button.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: var(--baseblue);
+    border: 0;
+    /* 33:39 絶対値の値にすることで幅が変わっても大丈夫 */
+    padding: 15px 80px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+
+
+/* ⭐feature */
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, .03);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, .1);
+}
+
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+    /* 41:50  padding takes too much spaceをなくす*/
+    /* blockは要素が横幅いっぱいに表示されます。 */
+    display: inline-block;
+    /* 📄width&heightでなくこうやるとh6の大きさがベースになる */
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: var(--baseblue);
+    background-color: #fddde4;
+}
+
+/* 45:25 📄childの後にh6！！！！！ */
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #cdebbc;
+}
+
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+
+#feature .fe-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+
+#feature .fe-box:nth-child(6) h6 {
+    background-color: #fff2e5;
+}
+
+
+
+/* ⭐product1 */
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+#product1 .pro {
+    /* 📄width２つ入れてもok */
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
+    /* 52:46🤔あってもなくても変わらない */
+    margin: 15px 0;
+    transition: all 300ms ease;
+
+    position: relative;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .06);
+}
+
+
+#product1 .pro img {
+    /* 親要素の100%だから＝画面（html)の20% */
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+    color: #1a1a1a;
+    font-size: 14px;
+    padding-top: 7px;
+}
+
+#product1 .pro .des i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    color: var(--baseblue);
+    font-weight: 700;
+}
+
+
+
+#product1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e8f6ea;
+    /* 58:10これやると消える */
+    /* font-weight: 500; */
+    color: #088178;
+    border: 1px solid var(--border);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+#product1 .pro .fa-cart-shopping::before {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+}
+
+
+
+
+
+
+/* ⭐banner */
+#banner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* hにalign-itemsは効かないので */
+    /* text-align: center; */
+    background-image: url(./img/banner/b2.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#banner h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+#banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+    text-align: center;
+
+}
+
+#banner h2 span {
+    color: #ef3636;
+}
+
+
+#banner button:hover {
+    background-color: var(--baseblue);
+    color: #fff;
+}
+
+/* ⭐sm-banner */
+
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    background-image: url(./img/banner/b17.jpg);
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+/* 1:22:52 📄#sm-bannerがないと効かない！！！！ */
+#sm-banner .banner-box2 {
+    background-image: url(./img/banner/b10.jpg);
+}
+
+#sm-banner h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    padding-bottom: 15px;
+}
+
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: .2s;
+}
+
+
+/* 📄1:21:20画像がhoverで色変わる！！！！！！ */
+#sm-banner .banner-box:hover button {
+    background-color: var(--baseblue);
+    border: 1px solid var(--baseblue);
+}
+
+/* button.white:hover {
+    background-color: var(--baseblue);
+    border: 1px solid var(--baseblue);
+
+} */
+
+/* ⭐banner3 */
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+
+#banner3 .banner-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    background-image: url(./img/banner/b7.jpg);
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-box2 {
+    background-image: url(./img/banner/b4.jpg);
+}
+
+#banner3 .banner-box3 {
+    background-image: url(./img/banner/b18.jpg);
+}
+
+
+#banner3 h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h3 {
+    color: #ec544e;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+/* ⭐newsletter */
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url(./img/banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+
+#newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+
+#newsletter p span {
+    color: #ffbd27;
+}
+
+#newsletter .form {
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input {
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    /* ⭐ */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+#newsletter button {
+    background-color: var(--baseblue);
+    color: #fff;
+    /* 空白がまとまる＋改行されない (nowrap) */
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    height: 3.125rem;
+}
+
+
+/* ⭐footer */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    color: #465b52;
+    font-size: 20px;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+    /* 自分でやった */
+    width: 49%;
+    margin-right: 2px;
+}
+
+/* payも含める */
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+
+}
+
+
+
+
+
+
+/* iPad*/
+@media (max-width: 799px) {
+    .section-p1 {
+        padding: 40px;
+    }
+
+    #navbar {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        /* 1:55:57📄ここをマイナスにすることでででくるアニメーションが作れる */
+        right: 0;
+        right: -300px;
+
+        width: 300px;
+        height: 100vh;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, .1);
+        padding: 80px 0 0 10px;
+        /* 2:03:18 */
+        transition: .3s;
+    }
+
+    #navbar.active {
+        right: 0;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+
+    }
+
+    /* 2:04:19 */
+    #close {
+        /* 2:07:30 */
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    /* ⭐hero */
+    #hero {
+        width: 100%;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    /* ⭐feature */
+    #feature {
+        justify-content: center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;
+        /* 🤔2:10:09section-p1調整してなくてもいい感じだけど？？ */
+    }
+
+    /* ⭐product */
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 15px;
+    }
+
+    /* ⭐banner */
+    #banner {
+        /* 高さ半減 */
+        height: 20vh;
+    }
+
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 30vh;
+    }
+
+
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
+    }
+
+
+    #banner3 {
+        padding: 0 40px;
+    }
+
+    #banner3 .banner-box {
+        width: 20%;
+    }
+
+    /* ⭐newsletter */
+    #newsletter .form {
+        width: 70%;
+    }
+
+
+}
+
+
+/* smartphone */
+
+@media (max-width: 477px) {
+    .section-p1 {
+        padding: 20px;
+    }
+
+    #header {
+        padding: 10px 30px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    #hero {
+        width: 100%;
+        padding: 0 20px;
+        /* 2:16:26と違う */
+        /* 答え */
+        background-position: 55%;
+        /* 大きくすると左に行く */
+        background-position: 70%;
+    }
+
+    #feature {
+        justify-content: space-evenly;
+    }
+
+    #feature .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+
+    #product1 .pro {
+        width: 100%;
+    }
+
+    #banner {
+        min-height: 40vh;
+        padding: 20px;
+    }
+
+    #banner h2 {
+        font-size: 37px;
+        /* padding: 10px; */
+    }
+
+    #sm-banner .banner-box {
+        height: 40vh;
+        /* 自作 */
+        background-position: right 30% center;
+    }
+
+    #banner3 {
+        padding: 0 20px;
+    }
+
+    #banner3 .banner-box {
+        width: 100%;
+    }
+
+
+    #newsletter {
+        padding: 40px 20px;
+    }
+
+    
+    #newsletter .form {
+        width: 100%;
+    }
+
+
+    /* 自作 */
+    footer .col {
+        margin: 0 9px 20px 0;
+    }
+
+    footer .copyright {
+        text-align: start;
+    }
+
+
+
+
+
+
+
+
+}
+
+/* 自作
+.slidein {
+    animation: slidein 300ms ease-in forwards;
+}
+
+@keyframes slidein {
+    from {
+        right: -300px;
+    }
+
+    to {
+        right: 0;
+    }
+} */
