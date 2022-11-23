@@ -833,6 +833,14 @@ footer .copyright {
         background-position: right 30% center;
     }
 
+    #sm-banner .banner-box h2 {
+        font-size: 20px;
+    }
+
+  #sm-banner .banner-box span {
+        font-size: 23px;
+    }
+
     #banner3 {
         padding: 0 20px;
     }
