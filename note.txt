@@ -1,8 +1,10 @@
-pr2 38
-pr3 24
-pr4 21
-pr5 29
+pr2 38🥰
+pr3 24🥰
+pr4 21🥰
+pr5 29🥰
 pr6 27
+
+~18:16
 
 =139mins
 =2.3h
@@ -12,3 +14,7 @@ pr6 27
 ;hoverの後にもプロパティかける
 
 dev toolsで調べたところをコピペしてmedia queryで変えたいとこだけ変える
+
+flex-direction: column;でparent内の要素の位置は自由に操作できる
+
+dev toolsとスマホが違うのはdev toolsは高さが高いから

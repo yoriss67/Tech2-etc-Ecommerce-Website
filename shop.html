@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech2etc E-commerce Tutorial</title>
-    
+
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/3715e2b643.js" crossorigin="anonymous"></script>
 
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleshop.css">
 </head>
+
 <body>
 
-    
- 
+
+
     <section id="header">
         <a href="#"><img class="logo" src="./img/logo.png" alt=""></a>
 
@@ -38,21 +43,17 @@
         </div>
     </section>
 
-    <section id="hero">
-        <h4>Trade-in-offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
+    <section id="page-header">
+        <h2>#stayhome</h2>
         <p>Save more with coupon & up to 70% off!</p>
-        <button>Shop Now</button>
     </section>
 
 
     <!-- 49:00📄一気に全部書いていく -->
     <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
-            <div class="pro">
+            <!-- pr2 33:13 -->
+            <div class="pro outstanding" onclick="window.location.href='sproduct.html'">
                 <img src="./img/products/f1.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -188,14 +189,7 @@
 
 
 
-        </div>
-    </section>
 
-    
-    <section id="product1" class="section-p1">
-        <h2>New Arrivals</h2>
-        <p>Summer Collection New Modern Design</p>
-        <div class="pro-container">
             <div class="pro">
                 <img src="./img/products/n1.jpg" alt="">
                 <div class="des">
@@ -336,6 +330,14 @@
     </section>
 
 
+    <section id="pagination" class="section-p1">
+        <!-- 🤔 -->
+        <a href="sproduct.html">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+
     <section id="newsletter" class="section-p1 section-m1">
 
         <div class="newstext">
@@ -409,4 +411,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

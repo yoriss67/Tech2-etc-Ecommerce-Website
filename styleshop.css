@@ -1,0 +1,206 @@
+:root {
+    --baseblue: #088178;
+    --border: #cce7d0;
+}
+
+
+
+
+
+#page-header {
+    background-image: url(./img/banner/b1.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+    /* align-items: center; =したと同じ*/
+    text-align: center;
+}
+
+#page-header h2, 
+#page-header p {
+    color: #fff;
+}
+
+#pagination {
+    text-align: center;
+}
+
+
+#pagination a {
+    text-decoration: none;
+    background-color: var(--baseblue);
+    border-radius: 4px;
+    color: #fff;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+#pagination a i {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+/* ⭐⭐sproduct.html */
+
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* 左 */
+#prodetails .single-pro-image {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/* 右 */
+#prodetails .single-pro-details {
+    width: 50%;
+   padding-top: 30px;
+   position: relative;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+}
+
+#prodetails .single-pro-details select {
+    /* 📄blockだと横に何も来ない*/
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+
+
+#prodetails .single-pro-details button {
+    background-color: var(--baseblue);
+    color: #fff;
+}
+
+
+#prodetails .single-pro-details span {
+    line-height: 25px;
+}
+
+
+#showcase {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/cart.png);
+    background-size: cover;
+    scale: 1.3;
+    /* 後でレスポンス */
+    top: 220px;
+    left: 175px;
+    transform: translateY(30px);
+    
+}
+
+.popup {
+    
+    animation: popup 800ms ease forwards;
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 0;
+
+    }
+
+}
+
+.display-none {
+    display: none;
+}
+
+#span2 {
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    top: -8px;
+    left: 33px;
+    border: #088178 2px solid;
+    background-color: #fff;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 16px;
+}
+
+@media (max-width: 799px) {
+    #showcase {
+        /* top: 48vh;
+        left: 71vw; */
+         
+    }
+}
+
+
+@media (max-width: 477px) {
+    #showcase {
+        /* top: 100vh;
+        left: 51vw; */
+         
+    }
+}
+
+@media (max-width: 321px) {
+    #showcase {
+        /* top: 92vh;
+        left: 60vw;
+        width: 40px;
+        height: 40px; */
+         
+    }
+
+    #span2 {
+        left: 29px;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,81 @@
+#page-header.about-header {
+    background-image: url(./img/about/banner.png);
+}
+
+/* #about-head .marquee-parent {
+    background-color: #ccc;
+    box-sizing: border-box;
+
+}
+
+#about-head .marquee {
+    animation: marquee-anim 10s linear infinite;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 50px;
+
+}
+
+@keyframes marquee-anim {
+	0%   { transform: translate(100%, 0); }
+	100% { transform: translate(-10%, 0); }
+} */
+
+#about-head {
+    display: flex;
+    align-items: center;
+}
+
+#about-head img {
+    width: 50%;
+    height: auto;
+}
+
+#about-head div {
+    padding-left: 40px ;
+}
+
+/* ----------------- */
+
+#about-app {
+    text-align: center;
+}
+
+#about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+/* 📄上だけだと効かないのでvideo自体にwidth */
+#about-app .video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+@media (max-width: 799px) {
+
+
+}
+
+
+
+@media (max-width: 477px) {
+    #about-head {
+        flex-direction: column;
+    }
+
+    #about-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about-head div {
+        padding-left: 0px;
+    }
+
+    #about-app .video {
+        width: 100%;
+    }
+}

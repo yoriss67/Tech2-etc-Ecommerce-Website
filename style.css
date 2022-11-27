@@ -16,6 +16,8 @@ h1 {
     font-size: 50px;
     line-height: 64px;
     color: #222;
+    font-weight: 700;
+
 }
 
 h2 {
@@ -68,6 +70,7 @@ button.normal {
 
 body {
     width: 100%;
+    /* overflow-x: hidden; */
 }
 
 
@@ -115,6 +118,10 @@ body {
 #navbar a:hover,
 /* aのあとスペース❌ */
 #navbar li a.active {
+    color: var(--baseblue);
+}
+
+#mobile a.active {
     color: var(--baseblue);
 }
 
@@ -281,6 +288,7 @@ body {
     border: 1px solid var(--border);
     border-radius: 20px;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
+    
     /* 52:46🤔あってもなくても変わらない */
     margin: 15px 0;
     transition: all 300ms ease;
@@ -288,8 +296,18 @@ body {
     position: relative;
 }
 
+
 #product1 .pro:hover {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, .06);
+}
+
+
+#product1 .outstanding {
+    box-shadow: 25px 25px 30px rgba(25, 133, 140, 0.15);
+}
+
+#product1 .outstanding:hover {
+    box-shadow: 30px 30px 30px rgba(182, 140, 34, 0.3);
 }
 
 
@@ -837,7 +855,7 @@ footer .copyright {
         font-size: 20px;
     }
 
-  #sm-banner .banner-box span {
+    #sm-banner .banner-box span {
         font-size: 23px;
     }
 
@@ -854,7 +872,7 @@ footer .copyright {
         padding: 40px 20px;
     }
 
-    
+
     #newsletter .form {
         width: 100%;
     }
@@ -869,7 +887,17 @@ footer .copyright {
         text-align: start;
     }
 
+    /* ⭐ single product*/
 
+    
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #prodetails .single-pro-details {
+        width: 100%;
+    }
 
 
 
